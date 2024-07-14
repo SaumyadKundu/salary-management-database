@@ -1,0 +1,35 @@
++-----------------+       +--------------+       +--------------+
+|   Departments   |       |   Employees  |       |   Salary     |
++-----------------+       +--------------+       +--------------+
+| DepartmentID    |<------| EmployeeID   |>----->| EmployeeID   |
+| DepartmentName  |       | Name         |       | BaseSalary   |
+| ManagerID       |       | DepartmentID |>----->| Bonus        |
+| Location        |       | Salary       |       | NetSalary    |
+| Description     |       | Benefits     |       | EffectiveDate|
++-----------------+       | HireDate     |       +--------------+
+                          | Email        |
+                          | Phone        |
+                          | Address      |
+                          +--------------+
+
++-----------------+
+|   Attendance    |
++-----------------+
+| AttendanceID    |
+| EmployeeID      |<-- Foreign key to Employees table
+| Date            |
+| HoursWorked     |
+| LeaveType       |
+| Reason          |
++-----------------+
+
++-----------------+
+|   Transactions  |
++-----------------+
+| TransactionID   |
+| TransactionType |
+| EmployeeID      |<-- Foreign key to Employees table
+| Amount          |
+| TransactionDate |
+| Description     |
++-----------------+
